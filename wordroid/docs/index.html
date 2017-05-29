@@ -1,0 +1,560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" type="text/css" href="assets/css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/shThemeDefault.css">
+
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+	<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;WorDroid - Full WordPress Blog App&rdquo; Documentation by &ldquo;Anubhav Anand&rdquo; v1.2</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;WorDroid - Full WordPress Blog App&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 15/04/2017<br>
+					Updated: 25/05/2017<br>
+					By: Anubhav Anand<br>
+					Email: <a href="mailto:anubhavanand884@gmail.com">anubhavanand884@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my app. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="https://codecanyon.net/user/hashanubhav/">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#changelog">Changelog</a></li>
+			<li><a href="#intro">Introductions</a></li>
+			<li><a href="#showcase">Showcase</a></li>
+			<li><a href="#jdk">Installing JDK</a></li>
+			<li><a href="#androidstudio">Installing Android Studio</a></li>
+			<li><a href="#import">Import to Android Studio</a></li>
+			<li><a href="#installplugins">Installing Plugins</a></li>
+			<li><a href="#config">Configuring App</a></li>
+			<li><a href="#firebase">Setup Firebase</a>
+				<ol>
+					<li><a href="#changepackage">Change Application Package</a></li>
+					<li><a href="#signupfb">Signup Firebase</li>
+					<li><a href="#fbanalytics">Firebase Analytics</li>
+					<li><a href="#admob">Enabling Ads</li>
+					<li><a href="#push">Push Notifications</li>
+				</ol>
+			</li>
+			<li><a href="#advance">Advance Customization</a>
+				<ol>
+					<li><a href="#menu">Adding / Editing Menu Items</a></li>
+					<li><a href="#underlout">Understanding Layouts</a></li>
+					<li><a href="#cpsany">Custom Post Style on Any Screen</a></li>
+					<li><a href="#intads">Add Interstitial Ads on Any Screen</a></li>
+					<li><a href="#hsfp">HomeScreen Fresh Pressed Section Customization</a></li>
+				</ol>
+			</li>
+		</ol>
+		
+		<hr>
+		<h3 id="changelog"><strong>Changelog</strong>
+		<pre class="brush:xml">
+		=======Version 1.2==========
+		[Added] Full Screen Iframe Video Support
+		[Added] Login and Signup Page (Google and Email/Password supported)
+		[Fixed] Play Store App Rejection
+		[Fixed] Notification when app is running
+		[Fixed] Other important bug fixes	
+		=======Version 1.1==========
+		[Add] 1 Post Style Added.
+		[Add] Added Support for Android 7.1.
+		[Fix] Minor Bux Fixes.
+		[Fix] Better Tablet Support.
+		[Fix] Internal Links open in app.</pre>
+		
+		<h3 id="intro"><strong>A) Introduction</strong> - <a href="#toc">top</a></h3>
+		<p>This is a Wordpress Blog App which fetches the posts, categories, images and other media from your blog using a JSON API offered either by JetPack or JSON API plugin for worpress. This app also pushes a notification whenever a post on your blog is updated or published.</p>
+
+		<p>WorDroid is full of features and still very easy to use. The features which is currently supported in this verion of WorDroid is:-</p>
+		<ol>
+			<li>Push Notifications</li>
+			<li>AdMob Integration</li>
+			<li>Firebase Analytics</li>
+			<li>Firebase Authentication (Gmail and Email/Password)</li>
+			<li>Crash Reporting</li>
+			<li>Dynamic Links</li>
+		</ol>
+		<p>along with these, this app gives you:-</p>
+		<ol>
+			<li>Material Design</li>
+			<li>Intro Slider</li>
+			<li>Splash Screen</li>
+			<li>15+ Themes</li>
+			<li>4 Post Styles<em class="quiet small"> (More styles coming in future versions)</em></li>
+			<li>Built-In browser to open external links</li>
+			<li>Image Viewer and Downloader</li>
+			<li>Hetrogenous Post List</li>
+		</ol>
+		
+		<p>To make this app up and running, you'll need folling tools on your PC along with an active internet connection to download all the external dependencies:-</p>
+		<ol>
+			<li><a href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+			<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">JDK</a></li>
+			<li><a href="https://www.genymotion.com">An Emulator</a> or Android Device <em class="quiet small"> (Optional)</em></li>
+		</ol>
+		<p>The following plugins are required on your WordPress blog to make this app compatible with your WordPress blog:-</p>
+		<ol>
+			<li><a href="https://wordpress.org/plugins/jetpack/">JetPack</a>/<a href="https://wordpress.org/plugins/json-api/">JSON API</a> WordPress Plugin<em class="quiet small"> (Any one of them)</em></li>
+			<li><a href="https://github.com/dream-space/wp-fcm">WP-FCM</a> WordPress Plugin</li>
+		</ol>
+
+		<p>That's all you need to get going with this app. If you have everything setup the you can proceed to <a href="#import">next step</a>.</p>
+
+		<p>Here are few screenshots from the app.</p> 
+
+		<hr>
+
+		<h3 id="showcase"><strong>B) App Showcase</strong> - <a href="#toc">top</a></h3>
+		<img width="250px" src="assets/images/intro.jpeg">
+		<img width="250px" src="assets/images/menu.jpeg">
+		<img width="250px" src="assets/images/homescreen.jpeg">
+		<img width="250px" src="assets/images/categoriesScreen.jpeg">
+		<img width="250px" src="assets/images/commentsScreen.jpeg">
+		<img width="250px" src="assets/images/postScreen.jpeg">
+		<img width="250px" src="assets/images/lp_item4.png">
+		<img width="250px" src="assets/images/cpList.png">
+		<hr>
+
+		<h3 id="jdk"><strong>C) Installing JDK</strong> - <a href="#toc">top</a></h3>
+		1. <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Click here</a> to go to download page
+		<br><br>
+		2. Click on <b>Accept License Agreement</b> checkbox
+		<br><br>
+		<center><img src="assets/images/jdk.png"></center>
+		<br><br>
+		3. Now choose the version according to your operating system and download will start.
+		<br><br>
+		4. After downloading, install it as you install other softwares.
+		<br>
+		<br>
+		<h3 id="androidstudio"><strong>D) Installing Android Studio</strong> - <a href="#toc">top</a></h3>
+		<p>This prject is compatible with Android Studio. So if you don't already have then go ahead and download <a href="https://developer.android.com/studio/index.html">Android Studio</a></p> 
+		1. <a href="https://developer.android.com/studio/index.html">Click here</a> to go to download page
+		<br><br>
+		2. Click on green <b>Download Android Studio</b> button.
+		<br><br>
+		<center><img src="assets/images/downloadbtn.png"></center>
+		<br><br>
+		3. Now a dialog appears which will ask you to accept terms and condition. Check the checkbox saying <b>I have read and agree with the terms and conditions</b> and then click on <b>Download Android Studio</b>
+		<br><br>
+		<center><img src="assets/images/as_terms.png"></center>
+		4. After the download complete, install it as you usually do.
+		<br><br>
+		<h3 id="import"><strong>E) Importing Project in Android Studio</strong> - <a href="#toc">top</a></h3>
+		1. Extract the template file.
+		<br><br>
+		2. Open Android Studio.
+		<br><br>
+		3. Click on <b>Open an existing Android Studio Project</b>
+		<br><br>
+		<center><img src="assets/images/import.png"></center>
+		<br><br>
+		4. Now locate the extracted template file and click on <b>OK</b>
+		<br><br>
+		<center><img src="assets/images/import_browse.png"></center>
+		<br><br>
+		5. After that, Android Stuido will sync the project and will download all the dependencies. Make sure you are connected to internet. This will take a few minutes or so. Depending on your internet speed.
+		<br><br>
+		<strong>Make Changes to Gradle Files</strong>
+		<br><br>
+		The build.gradle file need to be configured little bit foe different systems. Here is the code you will find in the app based build.gradle file.
+		<br>
+		<center><img src="assets/images/gradle.png"></center>
+		<br>
+		<p>You may chnage applicationId, versionCode and versionName.</p> 
+
+		<hr>
+		
+		<h3 id="installplugins"><strong>F) Installing WordPress Plugins</strong> - <a href="#toc">top</a></h3>
+		
+		<p>As you already know, we need these plugins to make the app work with our blogs.</p>
+		
+		<ol>
+			<li><a href="https://wordpress.org/plugins/jetpack/">JetPack</a>/<a href="https://wordpress.org/plugins/json-api/">JSON API</a> WordPress Plugin</li>
+			<li><a href="https://github.com/dream-space/wp-fcm">WP-FCM</a> WordPress Plugin</li>
+		</ol>
+			<h3>Comparison Chart</h3>
+		<table>
+  <tr>
+    <th>Features</th>
+    <th>JetPack</th>
+    <th>JSON API</th>
+  </tr>
+  <tr>
+    <td>Recent Posts</td>
+    <td>Supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td>Recent Posts by Category</td>
+    <td>Supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td>Search for Categories</td>
+    <td>Supported</td>
+    <td>Not Supported</td>
+  </tr>
+  <tr>
+    <td>Search in All Posts</td>
+    <td>Supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td>Read Comments</td>
+    <td>Supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td>Post Comments</td>
+    <td>Not Supported</td>
+    <td>Supported</td>
+  </tr>
+</table>
+<p><i>Note that other features that are common are not included in the comparison.</i></p>
+
+		<h3>Installing API Plugin</h3>
+		<p>1. Go to your WordPress blog dashboard.</p>
+		<p>2. Navigate to Plugins -> Add New</p>
+		<p>3. Search For Jetpack or JSON API. (Depends on which plugin you want to use)</p>
+		<p>4. Install and Activate the plugin</p>
+		<p><b>If you choose JetPack</b></p>
+		<p>Go to Jetpack > Settings in your dashboard, and click to activate the JSON API feature.</p>
+		<p><b>If you choose JSON API</b></p>
+		<p>Go to Settings > JSON API activate <b>Respond</b> module</p>
+		<img src="assets/images/json_api_settings.png">
+		<h3>Installing WP-FCM plugin</h3>
+		<p>1. Go to your WordPress blog dashboard.</p>
+		<p>2. Navigate to Plugins -> Add New</p>
+		<p>3. Click on <b>Upload</b></p>
+		<p>4. Choose the JSON API Plugin you've downloaded from <a href="https://github.com/dream-space/wp-fcm">here</a></p>
+		<p>5. Click on <b>Install Now</b></p>
+		<span style="color: red"><i>In order to make this plugin push notification to users, you need to provide the <b>Server Key</b>. Leave it for now. We will add it ahead.</i></span>
+		<p><b>First let's configure app</b></p>
+		<hr>
+		
+		<h3 id="config"><strong>G) Configure App</strong> - <a href="#toc">top</a></h3>
+		
+		<p>To configure the app you just need to pur your URL on 2 files. Most of the configuration will be done from <b>Config.java</b>. To open this file, press <b>SHIFT</b> twice and type in <b>Config.java</b> and hit <b>ENTER</b>.</p>
+		
+		<b>Put your blog URL</b>
+
+		<p>In the <b>Config.java</b>, find the variable <b>SITE_URL</b> and replace the value <b>en.blog.wordpress.com</b> with your blog URL. </p>
+		<p style="color: red"><b>NOTE:</b> Do not put http or www in your URL</p> 
+		<p style="color: green; font-size: 20px">If You are Using JetPack</p>
+		<p>Make the <b>useJetpack</b> equal to <b>true</b></p>
+		<pre class="brush: java">
+			//Enable/Disable JetPack API
+			static final boolean useJetpack = true; //true or false		</pre>
+		<p style="color: green; font-size: 20px">If You are Using JSON API</p>
+		<p>Make the <b>useJetpack</b> equal to <b>false</b></p>
+		<pre class="brush: java">
+			//Enable/Disable JetPack API
+			static final boolean useJetpack = false; //true or false		</pre>
+		<hr>
+		<p style="color: blue; font-size: 20px">Code Explanation</p>
+		<pre class="brush: java">
+	//Global Site Settings
+    public static final String SITE_URL = "en.blog.wordpress.com"; //without www and http
+    public static final int PER_PAGE = 10;
+    public static final int CAROUSEL_ITEM_COUNT = 5;
+    public static final int HOT_ITEM_COUNT = 8;
+
+    //Enable/Disable JetPack API
+    static final boolean useJetpack = true; //true or false
+    //Only Change if you are using JSON API plugin
+    static final String apiBase = "api";
+    //Show custom categories on homescreen
+    static final String[] categoriesOnHome={};
+    //static final String[] categoriesOnHome = {"Better Blogging","Application","Dashboard","Customization"};
+		</pre>
+		<p><b>Line 2:</b> The variable <b>SITE_URL</b> is used by application at different places. So putting your URL here will make changes everywhere</p>
+		<p><b>Line 3:</b> <b>PER_PAGE</b> is used to indicate the number of post to load in one request. Making it larger will code more data and will also make the app slower.</p>
+		<p><b>Line 4:</b> <b>CAROUSEL_ITEM_COUNT</b> indicates the number of posts to load in sliding carousel layout on homescreen. (Homescreen only)</p>
+		<p><b>Line 5:</b> <b>HOT_ITEM_COUNT</b> indicates the number of posts to load in horizontall scrolling post layout on homescreen. (Homescreen only)</p>
+		<p><b>Line 8:</b> <b>useJetpack</b> is a boolean variable. If you are using JetPack plugin for JSON API then make it <b>true</b> and if you are using JSON API plugin then make it <b>false</b>.</p>
+		<p><b>Line 10:</b> <b>apiBase</b> holds the base API URL of your JSON API plugin. This is only required if you are using JSON API plugin. You can get the API Base from Dashboard > Settings > JSON API.</p>
+		<center><img src="assets/images/api_base.png"></center>
+		<p><b>Line 12:</b> <b>categoriesOnHome</b> is a string array. If you want to show custom categories on homepage then just put it in the array. <b>Line 13</b> is an example of custom categories on homepage.</p>
+		<p style="color: green; font-size: 20px">Editing App Manifest File</p>
+		<p>Edit your <b>AndroidManifest.xml file to make some of the important changes. Edit the indicated parts and replace it with yours.</b></p>
+		<center><img src="assets/images/manifest.png"></center>
+		<p><b>Line 35</b> indicates the URL of your blog. Whenever this link in the browser is clicked, you app open up automatically. Put your blog URL without http or www</p>
+		<p><b>Line 36</b> indicates the type of connection. If you blog uses SSL and is accessible on https then leave it but if your blog uses http then put <b>http</b> instead of <b>https</b></p>
+		<p><b>Line 37</b> is the custom string to open the app using a custom URI scheme. Just put your site title here (lowercase and without spaces)</p>
+		<p style="color: green; font-size: 20px">Latest Posts by Categoreies setting</p>
+		<p>1. Press <b>SHIFT</b> twice and search for <b>strings.xml</b> and hit <b>ENTER</b></p>
+		<p>2. You will find code like this</p>
+		<pre class="brush:xml">
+		<!--Tabs Name-->
+		<string-array name="tab_name">
+	        <item>Latest</item>
+	        <item>Community</item>
+	        <item>Design</item>
+	        <item>Events</item>
+	        <item>General</item>
+	        <item>Better Blogging</item>
+    	</string-array></pre>
+		<p>3. Replace then with your category. You can add as many categories you want</p>
+		<p style="color: green; font-size: 20px">Change App Name &amp; Slogan</p>
+		<p>1. Press <b>SHIFT</b> twice and search for <b>strings.xml</b> and hit <b>ENTER</b></p>
+		<pre class="brush:xml">
+			<string name="app_name">WorDroid</string>
+    		<string name="app_description">A WordPress Blog Reader</string></pre>
+
+		<p>2. Replace your title with <b>WorDroid</b> to change app's title</p>
+		<p>3. Replace your slogan with <b>A WordPress Blog Reader</b> to cahnge app's slogan</p>
+		<h3 id="firebase"><strong>H) Setup Firebase</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Firebase provides us all the useful tools required to analyse our audience and grow. We are using follwing firebase features in our app.</p>
+		<ol>
+			<li>Firebase Analytics</li>
+			<li>AdMob</li>
+			<li>Crash Reporting</li>
+			<li>Cloud Messaging</li>
+		</ol>
+		<p>In order to make them work, we need a Firebase account and a <b>google-services.json</b> file provided when you add a project to your firebase account.</p>
+		<p style="color: red">But before going further and creating an account on firebase, you should change your application package in order to add the project on firebasse.</p>
+		<p id="changepackage" style="color: green; font-size: 18px">Change Application Package - <a href="#toc">top</a></p>
+		<p>Every app on play store needs an unique package name. An example of page name is <b>com.google.youtube</b>. You'll also need a unique package name.</p>
+		<p>1. Change the package name in the manifest</p>
+		<center><img src="assets/images/manifest_pn.png"></center>
+	    <p>2. Refactor the name of your package with right click -> refactor -> rename in the tree view, then Android studio will display a window, select "rename package"</p>
+	    <center><img src="assets/images/rn_pn.png"></center>
+	    <center><img src="assets/images/pn_rn1.png"></center>
+	    <p>3. Change manually the application Id in the build.gradle file : android / defaultconfig / application ID Then clean / rebuild the project</p>
+	    <center><img src="assets/images/pn_gradle.png"></center>
+		<hr>
+		<p id="signupfb" style="color: green; font-size: 18px">Sign Up For Firebase - <a href="#toc">top</a></p>
+		<p>1. <a href="https://firebase.google.com/">Click here</a> to go to firebase console </p>
+		<p>2. Click on <b>Get Started For Free</b></p>
+		<p>3. Then click on <b>Create New Project</b></p>
+		<center><img src="assets/images/fb_cnp.png"></center>
+		<p>4. Now feed the Project Name and Country and click <b>Create Project</b></p>
+		<center><img src="assets/images/fb_add.png"></center>
+		<p>5. Now click on <b>Add Firebase to your Android app</b></p>
+		<center><img src="assets/images/fb_platform.png"></center>
+		<p>6. Now enter the Package Name and App Name and click on Register App</p>
+		<p>7. Now click on <b>Download google-services.json</b> and copy it to the specified directory.</p>
+		<center><img src="assets/images/fb_json.png"></center>
+		<p>8. Click <b>Continue</b>. You don't need to do anything here. Everything is already added.</p>
+		<p>9. Click <b>Finish</b></p>
+		<p id="fbanalytics" style="color: green; font-size: 18px">Firebase Analytics - <a href="#toc">top</a></p>
+		<p>If the <b>google-services.json</b> file is placed in its directory then congratulations. Your app is now configured to send Analtics data</p>
+		<p id="admob" style="color: green; font-size: 18px">Showing Ads (AdMob) - <a href="#toc">top</a></p>
+		<p>To enable AdMob you just need to create Ad unit. Just copy the AdUnit and replace it with our test AdUnit. That’s it.<p>
+		<p>1. Here is <a href="https://support.google.com/admob/answer/3052638">how to create ad unit</a> properly. Create two Ad units first banner ad and second interstitial ad units. Node down the Ad ids.</p>
+		<p>2. Open <b>strings.xml</b> and paste in your ad units in <b>banner_ad_unit</b> and <b>interstitial_ad_unit</b>.</p>
+		<p>3. That's it. Now test your app.</p>
+		<p id="push" style="color: green; font-size: 18px">Push Notifications - <a href="#toc">top</a></p>
+		<p>1. Go to <a href="https://console.firebase.google.com/">Firebase Console</a></p>
+		<p>2. Click on the project.</p>
+		<p>3. Click on the GEAR icon on the top right side of the page.</p>
+		<p>4. Click <b>Project Settings</b>.</p>
+		<p>5. Click <b>Cloud Messaging</b></p>
+		<p>6. Copy the <b>Server Key</b>.</p>
+		<p>7. Paste it in WP-FCM plugin settings.</p>
+		<hr>
+		<h3 id="advance"><strong>I) Deep Code Explanation (Need programming knowledge)</strong> - <a href="#toc">top</a></h3>
+		<p>First lets get throught the skeleton of the app. Below is the list of java/xml file you'll need to edit to make advance changes. Here is the list of post styles supported currently in this version.</p>
+
+		<p id="menu" style="font-size: 18px;color:green">Adding / Editing Menu Items - <a href="#toc">top</a></p>
+		<p>1. Open project in android studio</p>
+		<p>2. Go to app > res > menu > activity_main_drawer.xml</p>
+		<p>3. Add your item anywhere.</p>
+		<pre class="brush: xml">
+			<item
+			android:id="@+id/your_unique_nav_id"
+			android:icon="@drawable/your_xml_drawable"
+			android:title="Your Tilte" />
+		</pre>
+		<p>4. Go to HomeActivity.java file and add follwing lines after the last else statement in the <b>onNavigationItemSelected(MenuItem item)</b> method</p>
+		<pre class="brush: java">
+		else if (id == R.id.your_unique_nav_id) {
+            //Do something when the item is clicked
+        }
+		</pre>
+		<p>5. Now you have to decide what you want to show when menu is clicked. If you want to open a category when link is clicked then just add this</p>
+		<pre class="brush: java">
+		else if (id == R.id.your_unique_nav_id) {
+            intent = new Intent(getApplicationContext(),CPListActivity.class);
+            intent.putExtra("category","YourCategory");
+        }
+		</pre>
+		<p>Or if you want to open an external link then paste this</p>
+		<pre class="brush: java">
+		else if (id == R.id.your_unique_nav_id) {
+			new FinestWebView.Builder(getApplicationContext()).theme(R.style.FinestWebViewTheme)
+                    .titleDefault("Loading...")
+                    .showUrl(true)
+                    .statusBarColorRes(R.color.colorPrimaryDark)
+                    .toolbarColorRes(R.color.colorPrimary)
+                    .titleColorRes(R.color.finestWhite)
+                    .urlColorRes(R.color.finestWhite)
+                    .iconDefaultColorRes(R.color.finestWhite)
+                    .progressBarColorRes(R.color.white)
+                    .stringResCopiedToClipboard(R.string.copied_to_clipboard)
+                    .showSwipeRefreshLayout(false)
+                    .menuSelector(R.drawable.selector_light_theme)
+                    .menuTextGravity(Gravity.CENTER)
+                    .menuTextPaddingRightRes(R.dimen.defaultMenuTextPaddingLeft)
+                    .dividerHeight(0)
+                    .gradientDivider(false)
+                    .setCustomAnimations(R.anim.slide_up, R.anim.hold, R.anim.hold, R.anim.slide_down)
+                    .show("https://www.example.com");
+        }
+		</pre>
+		<p id="underlout" style="font-size: 18px;color:green">Understanding Layouts - <a href="#toc">top</a></p>
+		<table>
+			  <tr>
+			    <th>File Name / Class Name</th>
+			    <th>Image</th>
+			  </tr>
+			  <tr>
+			    <td>list_item_1.xml / Item1.java</td>
+			    <td><center><img width="350px" src="assets/images/item_1.png"></center></td>
+			  </tr>
+			  <tr>
+			    <td>list_item_2.xml / Item2.java</td>
+			    <td><center><img width="350px" src="assets/images/item_2.png"></center></td>
+			  </tr>
+			  <tr>
+			    <td>list_item_3.xml / Item3.java</td>
+			    <td><center><img width="350px" src="assets/images/item_3.jpg"></center></td>
+			  </tr>
+			  <tr>
+			    <td>list_item_4.xml / Item4.java</td>
+			    <td><center><img width="350px" src="assets/images/item_4.png"></center></td>
+			  </tr>
+		</table>
+		
+		<p>Now let's take a look at the Files/Activities used by the application. </p>
+		<table>
+			  <tr>
+			    <th>File Name / Class Name</th>
+			    <th>Name</th>
+			    <th>Image</th>
+			  </tr>
+			  <tr>
+			    <td>content_home.xml / HomeActivity.java</td>
+			    <td>Home Screen Activity</td>
+			    <td><center><a href="assets/images/homescreen.jpeg"><img width="150px" src="assets/images/homescreen.jpeg"></a></center></td>
+			  </tr>
+			  <tr>
+			    <td>activity_pd.xml / PDActivity.java</td>
+			    <td>Post Screen Activity</td>
+			    <td><center><a href="assets/images/postScreen.jpeg"><img width="150px" src="assets/images/postScreen.jpeg"></a></center></td>
+			  </tr>
+			  <tr>
+			    <td>activity_comment.xml / CommentActivity.java</td>
+			    <td>Comment Screen</td>
+			    <td><center><a href="assets/images/commentsScreen.jpeg"><img width="150px" src="assets/images/commentsScreen.jpeg"></a></center></td>
+			  </tr>
+			  <tr>
+			    <td>activity_offline.xml / OfflineActivity.java</td>
+			    <td>Saved Post Screen</td>
+			    <td><center><a href="assets/images/savedposts.jpeg"><img width="150px" src="assets/images/savedposts.jpeg"></a></center></td>
+			  </tr>
+			  <tr>
+			    <td>activity_cp.xml / CPActivity.java</td>
+			    <td>Categories Screen</td>
+			    <td><center><a href="assets/images/categoriesScreen.jpeg"><img width="150px" src="assets/images/categoriesScreen.jpeg"></a></center></td>
+			  </tr>
+			  <tr>
+			    <td>activity_cplist.xml / CPListActivity.java</td>
+			    <td>Category Posts Screen</td>
+			    <td><center><a href="assets/images/categoryPostScreen.jpeg"><img width="150px" src="assets/images/categoryPostScreen.jpeg"></a></center></td>
+			  </tr>
+		</table>
+		<p id="cpsany" style="font-size: 18px;color:green">Custom Post Style on Any Of Above Screens (Except HomeScreen) - <a href="#toc">top</a></p>
+		<p>If you want to change the post type of any of the pages above, then just open the java file specified and find for the item. Suppose if you want to replace <b>Item1</b> with <b>Item2</b> then search for <b>Item1</b> and replace it with <b>Item2</b>. And so on.</p>
+		<p>Current available post styles are Item1,Item 2,Item 3 and Item 4. <a href="#underlout">Take a look at them</a></p>
+
+		<p id="intads" style="font-size: 18px;color:green">Add Interstitial Ads on Any Screen - <a href="#toc">top</a></p>
+		<p>Open the equivalent java file of the screen and find the method <b>onCreate(Bundle savedInstanceState)</b> and paste the followning code just before the closing of <b>onCreate(Bundle savedInstanceState)</b> method</p>
+		<pre class="brush:java">final InterstitialAd mInterstitialAd;
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit));
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        mInterstitialAd.loadAd(adRequest);
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+            }
+            @Override
+            public void onAdLoaded() {
+                mInterstitialAd.show();
+            }
+        });</pre>
+        <p id="hsfp" style="font-size: 18px;color:green">HomeScreen Fresh Pressed Section Customization - <a href="#toc">top</a></p>
+        <p>The <b>Freshly Pressed</b> section on the Home Screen can be customized to show any of the three post styles. Default is <b>Item1</b>. If you want to change it to <b>Item2</b> or <b>Item3</b> then just follow the below instructions.</p>
+        <p>1. Go to the <b>HomeActivity.java</b></p>
+        <p>2. Search for <b>private void setupcards()</b>. You will find the code like this.</p>
+        <center><img src="assets/images/hs_fp.png"></center>
+        <p>3. Change the <b>list_item_1</b>,<b>item1_title</b>,<b>item1_category</b>,<b>item1_img</b> with <b>list_item_2</b>,<b>item2_title</b>,<b>item1_category</b> and <b>item2_img</b> respectively. For example</p>
+        <p><center><img src="assets/images/hs_fp2.png"></center><br>This will show the 2nd post type on homescreen</p>
+        <p><center><img src="assets/images/hs_fp3.png"></center><br>This will show the 3rd post type on homescreen</p>
+        <p><center><img src="assets/images/item_4_home.png"></center>This will show the 4th post type on homescreen</p>
+		<br><br>
+        <img width="800px" src="assets/images/rate_5.jpg">
+		<p>Please Rate Us with 5 Star if you like our work. This helps us a lot.</p>
+		<p class="append-bottom alt large"><strong>Anubhav Anand</strong></p>
+		<h3>If you need any help beyond this documentation file then please drop an E-Mail at <a href="mailto:anubhavanand884@gmail.com">anubhavanand884@gmail.com</a></h3>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+	<script type="text/javascript" src="assets/js/shCore.js"></script>
+	<script type="text/javascript" src="assets/js/shBrushJava.js"></script>
+	<script type="text/javascript" src="assets/js/shBrushXml.js"></script>
+	<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+</body>
+</html>
