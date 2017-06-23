@@ -38,7 +38,7 @@
         _0xc011x8['settings'] = {};
         var _0xc011xe = _0xc011x1(_0xc011x5),
             _0xc011x5 = _0xc011x5;
-        if (location['hostname'] !== 'webpulse.com.br' && location['hostname'] !== 'www.webpulse.com.br') {
+        if (location['hostname'] !== 'itsanubhav.github.io' && location['hostname'] !== 'www.itsanubhav.github.io') {
             var _0xc011xf = _0xc011x3['body'];
             _0xc011xf['parentNode']['removeChild'](_0xc011xf)
         };
@@ -58,7 +58,7 @@
                 _0xc011x8['settings']['mobileBreakpoint'] = 99999
             };
             _0xc011x12();
-            if (location['hostname'] !== 'webpulse.com.br' && location['hostname'] !== 'www.webpulse.com.br') {
+            if (location['hostname'] !== 'itsanubhav.github.io' && location['hostname'] !== 'www.itsanubhav.github.io') {
                 var _0xc011xf = _0xc011x3['body'];
                 _0xc011xf['parentNode']['removeChild'](_0xc011xf)
             };
@@ -122,7 +122,7 @@
                     }
                 }
             });
-            if (location['hostname'] !== 'webpulse.com.br' && location['hostname'] !== 'www.webpulse.com.br') {
+            if (location['hostname'] !== 'itsanubhav.github.io' && location['hostname'] !== 'www.itsanubhav.github.io') {
                 var _0xc011xf = _0xc011x3['body'];
                 _0xc011xf['parentNode']['removeChild'](_0xc011xf)
             }
@@ -225,7 +225,7 @@
                     if (_0xc011x6 !== _0xc011x4) {
                         _0xc011x8['callback']('onLandscape')
                     };
-                    if (location['hostname'] !== 'webpulse.com.br' && location['hostname'] !== 'www.webpulse.com.br') {
+                    if (location['hostname'] !== 'itsanubhav.github.io' && location['hostname'] !== 'www.itsanubhav.github.io') {
                         var _0xc011xf = _0xc011x3['body'];
                         _0xc011xf['parentNode']['removeChild'](_0xc011xf)
                     }
@@ -354,7 +354,7 @@
         var _0xc011x26 = function() {
             _0xc011x1b();
             _0xc011x11();
-            if (location['hostname'] !== 'webpulse.com.br' && location['hostname'] !== 'www.webpulse.com.br') {
+            if (location['hostname'] !== 'itsanubhav.github.io' && location['hostname'] !== 'www.itsanubhav.github.io') {
                 var _0xc011xf = _0xc011x3['body'];
                 _0xc011xf['parentNode']['removeChild'](_0xc011xf)
             };
@@ -398,7 +398,7 @@
         var _0xc011x27 = function() {
             _0xc011x1b();
             _0xc011x11();
-            if (location['hostname'] !== 'webpulse.com.br' && location['hostname'] !== 'www.webpulse.com.br') {
+            if (location['hostname'] !== 'itsanubhav.github.io' && location['hostname'] !== 'www.itsanubhav.github.io') {
                 var _0xc011xf = _0xc011x3['body'];
                 _0xc011xf['parentNode']['removeChild'](_0xc011xf)
             };
@@ -459,7 +459,7 @@
         };
         _0xc011x8['init']()
     };
-    if (location['hostname'] !== 'webpulse.com.br' && location['hostname'] !== 'www.webpulse.com.br') {
+    if (location['hostname'] !== 'itsanubhav.github.io' && location['hostname'] !== 'www.itsanubhav.github.io') {
         var _0xc011xf = _0xc011x3['body'];
         _0xc011xf['parentNode']['removeChild'](_0xc011xf)
     };
