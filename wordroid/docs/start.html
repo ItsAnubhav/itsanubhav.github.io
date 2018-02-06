@@ -26,6 +26,11 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
     
 </head> 
 
@@ -297,6 +302,8 @@ public static final int interstitialAdInterval = 120; //Shows interstitial ads e
                             <section id="callouts-section" class="doc-section">
                                 <h2 class="section-title">Notifications Settings</h2>
                                 <div class="section-block">
+                                    <p style="color:red">Make sure you have replaced the OneSignal APP ID inside the <b>build.gradle</b></p>
+                                    <img src="assets/images/onesignal-app-id.png"><br><br>
                                     <p>To enable notifications, you just need to copy the OneSignal App ID and OneSignal REST API Key to your wordpress dashboard (Dashboard > Wordroid > Settings).  If you don't have the OneSignal App created then watch <a href="https://youtu.be/_W81yyzBBf8?t=442">this video</a> (This is for older version of WorDroid but all the steps are same)
                                     </p>
                                     <p style="color:red">Make sure you have added the OneSignal App Id in your app's build.gradle file.</p>
@@ -312,6 +319,67 @@ public static final int interstitialAdInterval = 120; //Shows interstitial ads e
                                 <h2 class="section-title">Add category to Navigation Drawer</h2>
                                 <div class="section-block">
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/r-iDVte-pQ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                            </section>
+                            <section id="menu-edit" class="doc-section">
+                                <h2 class="section-title">Add category to Navigation Drawer</h2>
+                                <div class="section-block">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/r-iDVte-pQ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                            </section>
+                            <section id="change-homescreen" class="doc-section">
+                                <h2 class="section-title">Change Default Hoescreen</h2>
+                                <div class="section-block">
+                                   <p>There are 3 homescreens provided in the app. HomeScreen 1 is set as default</p>
+                                   <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Class Name</th>
+                                                <th>HomeScreen</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td><b>MainActivity</b></td>
+                                                <td>HomeScreen 1</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td><b>CarouselPostListActivity</b></td>
+                                                <td>HomeScreen 2</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td><b>ViewPagerActivity</b></td>
+                                                <td>HomeScreen 3</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>Go to the <b>SplashActivity.java</b> file and look for the <b>MainActivity.class</b> and replace with the <b>classname.class</b></p>
+                                    <p>For example: If I want to make HomeScreen 2 as my default homescreen the I will replace the <b>MainActivity.class</b> with <b>CarouselPostListActivity.class</b></p>
+                                </div>
+                                </div>
+                            </section>
+                            <section id="change-appicon" class="doc-section">
+                                <h2 class="section-title">Change App Icons</h2>
+                                <div class="section-block">
+                                    <p>All the app icons are located inside the <b>res</b> folder. There you will see 5 folders named <b>mipmap</b></p>
+                                    <img src="assets/images/folder-mipmap.png">
+                                    <p>I would recommend you to generate the App Icon with <a href="https://makeappicon.com/">MakeAppIcon</a></a>.
+                                    <br>
+                                    It will give you a zip with all sizes of App Icons. Just paste the icons in their respective folder and you are done.
+                                    </p>
+                                </div>
+                            </section>
+                            <section id="change-color" class="doc-section">
+                                <h2 class="section-title">Change Colors</h2>
+                                <div class="section-block">
+                                    <p>All the colors are in <b>res > values > colors.xml</b> file.</p>
+                                    <p>The <b>SplashScreen</b> background and <b>ToolBar</b> background gradient file is located inside the <b>res > drawable > gradient_background.xml</b></p>
+                                    <p>You can change the hex color inside to match your website.</p>
+                                    <img src="assets/images/gradient-color.png"
+                                </div>
                             </section>
                         </div><!--//content-inner-->
                     </div><!--//doc-content-->
@@ -341,6 +409,9 @@ public static final int interstitialAdInterval = 120; //Shows interstitial ads e
                                 <li><a class="scrollto" href="#callouts-section">Notifications</a></li>
                                 <li><a class="scrollto" href="#change-package">Change Package</a></li>
                                 <li><a class="scrollto" href="#menu-edit">Edit Menu</a></li>
+                                <li><a class="scrollto" href="#change-homescreen">Change Default Hoescreen</a></li>
+                                <li><a class="scrollto" href="#change-appicon">Change App Icon</a></li>
+                                <li><a class="scrollto" href="#change-color">Change Color</a></li>
                             </ul><!--//doc-menu-->
                         </nav>
                     </div><!--//doc-sidebar-->
