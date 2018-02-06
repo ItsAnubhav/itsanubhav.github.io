@@ -156,14 +156,16 @@
                                         <h6>Config.java</h6>
                                         <pre class="line-numbers" data-start="7"><code class="language-java">public class Config {
 
-    public static final String siteUrl = "http://dev.itsanubhav.com"; //no trailing slash
+    public static final String siteUrl = "http://dev.itsanubhav.com"; //no tailing slash
 
-    public static boolean enableSignupSignin = true;
+    public static int defaultHomeScreen = 1; //Choose from 1,2 or 3
+
+    public static boolean enableSignupSignin = false;
     public static final int currentAppVersion = 4;
     public static final boolean isPluginInstalled = true;
     public static final boolean showBannerAds = false;
     public static final boolean showFullScreenAds = false;
-    public static final int interstitialAdInterval = 120; //Shows interstitial ads every 120 seconds
+    public static final int interstitialAdInterval = 120; //Shows interstitial ads every 20 seconds
     public static final boolean showLatestCategoryWhenNothingSelected = true;
     public static final boolean showLatestPostsInSliderWhenNoCategorySelected = false;
 
@@ -205,6 +207,48 @@
                                     </div><!--//code-block-->
                                     <p>Change the <b>http://dev.itsanubhav.com</b> with your wordpress URL. Do not add trailing slash</p>
                                 </div><!--//section-block-->
+                                <div id="def-home" class="section-block">
+                                <h2 class="section-title">Change Default Hoescreen</h2>
+                                <div class="section-block">
+                                    <p>The app is update on 06-02-2018 6:40PM +5:30 GMT. Please download the update.</p>
+                                    <pre class="line-numbers" data-start="11"><code class="language-java"> public static int defaultHomeScreen = 1; //Choose from 1,2 or 3</code></pre>
+                                    <br><p>Change the value to <b>1</b> for <b>HomeScreen 1</b>, <b>2</b> for <b>HomeScreen 2</b> and <b>3</b> for <b>HomeScreen 3</b></p>
+                                    <p>Thats all you need. This will also remove the unwanted menu items from the navigation drawer.</p>
+                                    <hr>
+                                    <h6>For the older version downloaded before 06-02-2018 6:40PM +5:30 GMT</h6>
+                                   <p>There are 3 homescreens provided in the app. HomeScreen 1 is set as default</p>
+                                   <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Class Name</th>
+                                                <th>HomeScreen</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td><b>MainActivity</b></td>
+                                                <td>HomeScreen 1</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td><b>CarouselPostListActivity</b></td>
+                                                <td>HomeScreen 2</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td><b>ViewPagerActivity</b></td>
+                                                <td>HomeScreen 3</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>Go to the <b>SplashActivity.java</b> file and look for the <b>MainActivity.class</b> and replace with the <b>classname.class</b></p>
+                                    <p>For example: If I want to make HomeScreen 2 as my default homescreen the I will replace the <b>MainActivity.class</b> with <b>CarouselPostListActivity.class</b></p>
+                                </div>
+                                </div>
+                            </div>
                                 <div id="less" class="section-block">
                                     <div class="code-block">
                                         <h6>Enable/Disable SignIn &amp; SignUp</h6>
@@ -320,42 +364,6 @@ public static final int interstitialAdInterval = 120; //Shows interstitial ads e
                                 <div class="section-block">
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/r-iDVte-pQ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
                             </section>
-                            <section id="change-homescreen" class="doc-section">
-                                <h2 class="section-title">Change Default Hoescreen</h2>
-                                <div class="section-block">
-                                   <p>There are 3 homescreens provided in the app. HomeScreen 1 is set as default</p>
-                                   <div class="table-responsive">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Class Name</th>
-                                                <th>HomeScreen</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td><b>MainActivity</b></td>
-                                                <td>HomeScreen 1</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td><b>CarouselPostListActivity</b></td>
-                                                <td>HomeScreen 2</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td><b>ViewPagerActivity</b></td>
-                                                <td>HomeScreen 3</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <p>Go to the <b>SplashActivity.java</b> file and look for the <b>MainActivity.class</b> and replace with the <b>classname.class</b></p>
-                                    <p>For example: If I want to make HomeScreen 2 as my default homescreen the I will replace the <b>MainActivity.class</b> with <b>CarouselPostListActivity.class</b></p>
-                                </div>
-                                </div>
-                            </section>
                             <section id="change-appicon" class="doc-section">
                                 <h2 class="section-title">Change App Icons</h2>
                                 <div class="section-block">
@@ -398,6 +406,7 @@ public static final int interstitialAdInterval = 120; //Shows interstitial ads e
                                     <ul class="nav doc-sub-menu">
                                         <li><a class="scrollto" href="#html">Config</a></li>
                                         <li><a class="scrollto" href="#css">Site Setting</a></li>
+                                        <li><a class="scrollto" href="#def-home">Default HomeScreen</li>
                                         <li><a class="scrollto" href="#less">SignIn/SignUp</a></li>
                                         <li><a class="scrollto" href="#sass">App Updates</a></li>
                                         <li><a class="scrollto" href="#javascript">Ads Setup</a></li>
@@ -406,7 +415,6 @@ public static final int interstitialAdInterval = 120; //Shows interstitial ads e
                                 <li><a class="scrollto" href="#callouts-section">Notifications</a></li>
                                 <li><a class="scrollto" href="#change-package">Change Package</a></li>
                                 <li><a class="scrollto" href="#menu-edit">Edit Menu</a></li>
-                                <li><a class="scrollto" href="#change-homescreen">Change Default Hoescreen</a></li>
                                 <li><a class="scrollto" href="#change-appicon">Change App Icon</a></li>
                                 <li><a class="scrollto" href="#change-color">Change Color</a></li>
                             </ul><!--//doc-menu-->
